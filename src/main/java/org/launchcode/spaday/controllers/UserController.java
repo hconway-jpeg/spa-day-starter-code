@@ -35,6 +35,7 @@ public class UserController {
         User user = UserData.getById(userId);
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
+        model.addAttribute("dateJoined", user.getDateJoined());
         return "user/details";
     }
 
