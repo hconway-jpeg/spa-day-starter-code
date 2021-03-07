@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>New Client</title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h3 style="color: red;" th:text="${error}"></h3>
+
+    <form method="post" action="/user">
+        <label>
+            User Name
+            <input type="text" name="username" th:value="${username}">
+        </label>
+        <label>
+            Email Address
+            <input type="email" name="email" th:value="${email}">
+        </label>
+        <label>
+            Password
+            <input type="password" name="password">
+        </label>
+        <label>
+            Confirm Password
+            <input type="password" name="verify">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

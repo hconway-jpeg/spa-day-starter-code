@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome</title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <h1>Welcome</h1>
+        <p th:text="${username}"></p>
+        <p th:text="${email}"></p>
+
+    <h3 th:replace="fragments :: addUser"></h3>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome</title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <h1 th:text="${'Hello, ' + user.username + '. Welcome to Paradise.'}"></h1>
+
+    <a href="/">Services Menu</a>
+    <a href="/user/add">Create a Profile</a>
+
+    <h3>Spa Clientele</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Profile</th>
+            </tr>
+        </thead>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.username}"></td>
+                <td>
+                    <a th:href="@{/user/details/{id}(id=${user.id})}">Client Info</a>
+                </td>
+            </tr>
+    </table>
+
+</body>
+</html>
