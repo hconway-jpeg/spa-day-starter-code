@@ -8,7 +8,7 @@ public class User {
     private String email;
     private String password;
     private int id;
-    private static int nextId =1;
+    private static int nextId = 1;
     private final Date dateJoined;
 
     public User(String username, String email, String password) {
